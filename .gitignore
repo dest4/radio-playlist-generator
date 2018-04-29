@@ -1,0 +1,5 @@
+log/
+musics/
+node_modules/
+youtube-dl
+*.sqlite

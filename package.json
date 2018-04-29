@@ -1,0 +1,17 @@
+{
+  "name": "radio-playlist-generator",
+  "version": "0.1.0",
+  "description": "Fetches media from Youtube according to the metadata from a given radio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexandre Storelli <a_npm@storelli.fr>",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "abr-log": "git+https://git@github.com/dest4/log.git",
+    "async": "^2.6.0",
+    "sqlite3": "^4.0.0",
+    "webradio-metadata": "^0.1.16"
+  }
+}
