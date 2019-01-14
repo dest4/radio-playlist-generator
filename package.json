@@ -10,8 +10,8 @@
   "license": "AGPL-3.0",
   "dependencies": {
     "abr-log": "git+https://git@github.com/dest4/log.git",
-    "async": "^2.6.0",
-    "sqlite3": "^4.0.0",
-    "webradio-metadata": "^0.1.16"
+    "async": "^2.6.1",
+    "sqlite3": "^4.0.6",
+    "webradio-metadata": "^0.1.33"
   }
 }

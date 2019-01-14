@@ -4,12 +4,12 @@ const sqlite3 = require("sqlite3");
 const cp = require("child_process");
 const async = require("async");
 
-const country = "France";
-const name = process.argv[2]; //"Virgin Radio France";
+const country = process.argv[2];
+const name = process.argv[3]; //"Virgin Radio France";
 
-if (!name) {
-	log.info("usage: \"node index.js RADIO\" where RADIO is in the following list:");
-	return log.info(JSON.stringify(getAvailable().map(e => e.name), null, "\t"));
+if (!country || !name) {
+	log.info("usage: \"node index.js COUNTRY RADIO\" where COUNTRY and RADIO are in the following list:");
+	return log.info(JSON.stringify(getAvailable().map(e => e.country + "_" + e.name), null, "\t"));
 } else {
 	log.info("generate playlist for radio " + name);
 }
@@ -20,7 +20,7 @@ function f() {
 	async.waterfall([
 		function(cb) {
 			getMeta(country, name, cb);
-		}, function(meta, corsEnabled, cb) { // check that the music is not already in DB
+		}, function(meta, cb) { // check that the music is not already in DB
 			log.info("meta=" + JSON.stringify(meta));
 			db.get("SELECT artist, title FROM songs WHERE artist = ? AND title = ?", [meta.artist, meta.title], function(err, line) {
 				if (err) return cb(err);
