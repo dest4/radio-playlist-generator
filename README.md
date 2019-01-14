@@ -18,7 +18,7 @@ node index.js
 
 To watch for metadata changes, and download every new song in the `musics` folder:
 ```
-node index.js "Virgin Radio France"
+node index.js "France" "RTL2"
 ```
 
 ## License
