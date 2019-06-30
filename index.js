@@ -9,7 +9,7 @@ const name = process.argv[3]; //"Virgin Radio France";
 
 if (!country || !name) {
 	log.info("usage: \"node index.js COUNTRY RADIO\" where COUNTRY and RADIO are in the following list:");
-	return log.info(JSON.stringify(getAvailable().map(e => e.country + "_" + e.name), null, "\t"));
+	return log.info(JSON.stringify(getAvailable().map(e => [e.country, e.name]), null, "\t"));
 } else {
 	log.info("generate playlist for radio " + name);
 }

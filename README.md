@@ -9,6 +9,8 @@ npm install
 wget https://yt-dl.org/downloads/latest/youtube-dl
 ```
 
+If you already have `youtube-dl`, make sure it is up to date with `sudo youtube-dl -U`
+
 ## Usage
 
 To get the list of supported radios:
@@ -18,7 +20,7 @@ node index.js
 
 To watch for metadata changes, and download every new song in the `musics` folder:
 ```
-node index.js "Virgin Radio France"
+node index.js "France" "Radio FG"
 ```
 
 ## License
